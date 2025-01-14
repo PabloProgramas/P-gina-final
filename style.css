@@ -1,0 +1,873 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: -700px;
+    /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+/*------------------------ Barras iniciales -----------------------*/
+/* Navbar y Top Bar combinados */
+.sticky-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    /* Asegura que se superponga correctamente sobre otros elementos */
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú Nav-bar */
+.navbar-custom .nav-link {
+    color: rgb(7, 7, 7);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #40694b;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: white;
+}
+
+/* Ajuste del botón del navbar */
+.navbar-toggler {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.navbar-brand img {
+    width: 30%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Barra de contacto */
+.top-bar {
+    background: linear-gradient(to bottom, #000000, #40694b);
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1040;
+    /* Asegura que se superponga correctamente sobre otros elementos */
+}
+
+.top-bar .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/*------------------------ Video -----------------------*/
+
+.video-background {
+    position: relative;
+    height: 80vh;
+    /* Reducir al 80% de la altura original */
+    overflow: hidden;
+    margin-top: 130px;
+    /* Ajusta este valor según tus necesidades */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.video-background-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 150px;
+}
+
+@media (max-width: 768px) {
+    .video-background-content {
+        padding-top: 80px;
+    }
+}
+
+.video-background {
+    height: 60vh;
+    /*Ajuste de altura para pantallas más pequeñas */
+}
+
+
+/*------------------------ Servicios -----------------------*/
+
+.center-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.center-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio del contenedor */
+    min-height: 100vh;
+    /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+.service-grid .row {
+    width: 100%;
+    /* Asegura que la fila ocupe el 100% del contenedor */
+    display: flex;
+    justify-content: space-between;
+    /* Alinea los elementos a los extremos */
+    align-items: center;
+    /* Centra verticalmente */
+    flex-wrap: nowrap;
+    /* Evita que las columnas se dividan en varias filas */
+}
+
+.service-grid .col-md-6 {
+    flex-basis: 50;
+    /* Asigna el 65% de ancho a la primera columna */
+    max-width: 50%;
+    /* Limita el ancho máximo */
+}
+
+.service-grid .col-md-6:nth-child(2) {
+    flex-basis: 50%;
+    /* Asigna el 35% de ancho a la segunda columna */
+    max-width: 50%;
+    /* Limita el ancho máximo */
+}
+
+.service-grid .service-list {
+    font-size: 1.3rem;
+    /* Ajusta este valor según tus necesidades */
+    font-weight: bold;
+    /* Pone el texto en negrita */
+    list-style: none;
+    /* Elimina el estilo de lista predeterminado */
+    padding: 0;
+    /* Elimina el padding predeterminado */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    margin-right: 0;
+    margin-left: 21%;
+}
+
+.service-item {
+    margin-bottom: 0.5rem;
+}
+
+.service-grid img {
+    max-width: 60%;
+    /* Reduce el tamaño de la imagen al 60% de su tamaño original */
+    height: auto;
+    border-radius: 10px;
+    margin-left: 1%;
+    /* Asegura que la imagen se alinee correctamente */
+
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+
+    /* Tablets y pantallas medianas */
+    .service-grid .col-md-6 {
+        flex-basis: 60%;
+        /* Ajuste a 60% para mantener espacio */
+        max-width: 60%;
+    }
+
+    .service-grid .col-md-6:nth-child(2) {
+        flex-basis: 40%;
+        /* Ajuste a 40% para la segunda columna */
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Pantallas pequeñas y móviles */
+    .service-grid .row {
+        flex-wrap: wrap;
+        /* Permite que las columnas se apilen */
+    }
+
+    .service-grid .col-md-6 {
+        flex-basis: 100%;
+        /* Ocupan el 100% del ancho */
+        max-width: 100%;
+        /* Asegura que ocupen todo el espacio */
+    }
+
+    .service-grid .col-md-6:nth-child(2) {
+        flex-basis: 100%;
+        /* Igual al 100% para la segunda columna */
+        max-width: 100%;
+        /* Se apilan verticalmente */
+    }
+
+    .service-grid img {
+        max-width: 70%;
+        /* Ajusta el tamaño de la imagen */
+        margin-left: 15%;
+        /* Centra la imagen horizontalmente */
+    }
+}
+
+.Titulo_Servicios {
+    align-items: center;
+    position: relative;
+    z-index: 1080;
+    top: -450px;
+    color: white;
+    /* Color blanco */
+    font-weight: bold;
+    /* Negrita */
+    text-align: center;
+    /* Centrado */
+}
+
+
+/*------------------------ Detalle de servicios -----------------------*/
+/* Contenedor principal */
+.container-Servicios {
+    background-color: #40694b;
+    padding: 1rem;
+    border-radius: 15px;
+    transform: scale(1.0);
+    transform-origin: center;
+    margin: 0 auto;
+    position: relative;
+    top: -480px;
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+    grid-gap: 1rem;
+    box-sizing: border-box;
+}
+
+/* Filas impares (30% imágenes, 70% texto) */
+.fila-impar {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    align-items: start;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+/* Filas pares (70% texto, 30% imágenes) */
+.fila-par {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    background-color: #40694b;
+    align-items: start;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+/* Ajustes para la galería */
+.my-gallery {
+    position: relative;   
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* Elimina las barras de desplazamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* Cada imagen ocupa el 100% del ancho */
+.my-gallery-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0; /* Apilar las imágenes */
+}
+
+/* Imágenes dentro de la galería */
+.my-gallery img {
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+    /* Ajusta el contenido de la imagen */
+    border-radius: 10px;
+}
+
+/* Animación de transición */
+.my-gallery {
+    animation: slide 10s infinite;
+}
+
+/* Animación para el reemplazo de imágenes */
+@keyframes fade-random {
+    0%, 20% {
+        opacity: 0; /* Imagen visible */
+    }
+    30%, 50% {
+        opacity: 1; /* Imagen invisible */
+    }
+    60%, 100%{
+        opacity: 0;
+    }
+}
+
+/* Aplicación de la animación con retardo variable*/
+.my-gallery-item:nth-child(1) {
+    animation: fadeInOut 8s infinite; /* Animación de 8s */
+    animation-delay: calc(var(--delay, 0s) + 0s);
+    animation-direction: alternate;
+}
+
+.my-gallery-item:nth-child(2) {
+    animation: fadeInOut 8s infinite;
+    animation-delay: calc(var(--delay, 0s) + 2s);
+    animation-direction: alternate;
+}
+
+.my-gallery-item:nth-child(3) {
+    animation: fadeInOut 8s infinite;
+    animation-delay: calc(var(--delay, 0s) + 4s);
+    animation-direction: alternate;
+}
+
+
+/* Aplicación de la animación con tiempos diferentes para filas */
+/* Primera fila */
+#desratizacion .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 0s;
+}
+#desratizacion .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 2.5s;
+}
+#desratizacion .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 5s;
+}
+
+/* Segunda fila */
+#fumigación_cucarachas .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 1s;
+}
+#fumigación_cucarachas .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 3.5s;
+}
+#fumigación_cucarachas .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 6s;
+}
+
+/* tercera fila */
+#pulgas .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 2s;
+}
+#pulgas .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 4.5s;
+}
+#pulgas .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 7s;
+}
+
+/* cuarta fila */
+#hormigas .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 3s;
+}
+#hormigas .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 5.5s;
+}
+#hormigas .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 8s;
+}
+
+/* quinta fila */
+#murcielagos .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 4s;
+}
+#murcielagos .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 6.5s;
+}
+#murcielagos .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 9s;
+}
+
+/* sexta fila */
+#mosquitos .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 0s;
+}
+#mosquitos .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 2.5s;
+}
+#mosquitos .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 5s;
+}
+
+/* Septima fila */
+#palmeras .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 1s;
+}
+#palmeras .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 3.5s;
+}
+#palmeras .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 6s;
+}
+
+/* octava fila */
+#analisis_agua .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 2s;
+}
+#analisis_agua .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 4.5s;
+}
+#analisis_agua .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 7s;
+}
+
+/* novena fila */
+#limpieza_tanque .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 3s;
+}
+#limpieza_tanque .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 5.5s;
+}
+#limpieza_tanque .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 8s;
+}
+
+/* décima fila */
+#redes .my-gallery-item:nth-child(1) {
+    animation: fade-random 10s infinite;
+    animation-delay: 4s;
+}
+#redes .my-gallery-item:nth-child(2) {
+    animation: fade-random 10s infinite;
+    animation-delay: 6.5s;
+}
+#redes .my-gallery-item:nth-child(3) {
+    animation: fade-random 10s infinite;
+    animation-delay: 9s;
+}
+
+/* Contenedores de texto */
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 1rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.text-container p {
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    .fila-impar,
+    .fila-par {
+        grid-template-columns: 1fr;
+    }
+
+    .text-container {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+#Desratización{
+    top: -600px;
+}
+
+
+
+
+
+/*------------------------ Carrusel de clientes -----------------------*/
+
+/* Ajusta la posición del carrusel */
+#clients {
+    position: relative;
+    top: -460px;
+    /* Ajusta el valor según sea necesario */
+    margin-bottom: 2rem;
+    /* Espacio inferior para el resto del contenido */
+}
+
+/* Ajusta las imágenes del carrusel */
+.client-img {
+    width: 30%;
+    /* Escala las imágenes al 30% del tamaño original */
+    height: auto;
+    /* Mantiene la proporción de las imágenes */
+    display: block;
+    /* Asegura el centrado correcto */
+    margin: 0 auto;
+    /* Centra las imágenes en el carrusel */
+    border-radius: 10px;
+    /* Opcional: redondea los bordes de las imágenes */
+}
+
+/* Centra el texto y ajusta la presentación general */
+#clients h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    /* Ajusta el tamaño del título si es necesario */
+    color: #333;
+    /* Cambia el color del texto si es necesario */
+}
+
+/* Ajusta el carrusel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+    align-items: center;
+    /* Centra las imágenes verticalmente */
+    gap: 1rem;
+    /* Espaciado entre los elementos del carrusel */
+}
+
+
+/*------------------------ Formulario de contactos -----------------------*/
+
+.contact-section {
+    position: relative;
+    top: -410px;
+    background-color: #40694b;
+    /* Fondo verde */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* Ocupa el 80% de la página */
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 60px;
+    /* Añadir espacio arriba para el ajuste del scroll */
+    margin-top: -60px;
+    /* Compensa el espacio añadido para que no afecte al diseño */
+}
+
+.contact-section h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+}
+
+.contact-image,
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.contact-form label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px white;
+}
+
+.contact-form button {
+    padding: 10px;
+    color: white;
+    background-color: #609760;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #40694b;
+}
+
+.contact-description {
+    color: white;
+    /* Color blanco */
+    font-weight: bold;
+    /* Negrita */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/*------------------------ Mapa Encuéntranos -----------------------*/
+.map-section {
+    position: relative;
+    top: -450px;
+    background-color: #f7fcf8;
+    /* Fondo verde similar a la sección de contacto */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* Ocupa el 80% de la página */
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.map-section h1 {
+    color: rgb(8, 8, 8);
+    margin-bottom: 20px;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/*------------------------ Footer -----------------------*/
+
+/*Footer*/
+#footerbackground {
+    position: relative;
+    flex-shrink: 0;
+    top: -460px;
+    bottom: 0;
+    width: 100%;
+    height: calc(16% - 1px);
+    /* Ajusta la altura del footer, reduciendo más con los márgenes */
+    background: linear-gradient(to bottom, #40694b, #000000);
+    /* Degradé de verde a negro */
+    text-align: center;
+    /* Alineación del texto */
+    padding: 10px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra para darle algo de estilo */
+    left: 0;
+    /* Alineación a la izquierda */
+    box-sizing: border-box;
+    /* Incluye el padding dentro de la altura y el ancho */
+    margin-bottom: -10px;
+    /* Utiliza un margen negativo si necesitas reducir más el espacio */
+
+}
+
+.footer-content {
+    transform: scale(1.2);
+    /* Reduce el tamaño del contenido del footer al 60% */
+    transform-origin: bottom center;
+    /* Ajusta el punto de origen de la transformación */
+    display: inline-block;
+    /* Asegura que el contenido se centre horizontalmente */
+    width: 100%;
+}
+
+#tituloRS {
+    color: white;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/*Íconos de redes sociales*/
+.contenedor {
+    margin: 0;
+    top: 140%;
+    left: 50%;
+    text-align: center;
+}
+
+.contenedor i {
+    text-align: center;
+    font-size: 25px;
+    color: #48705d;
+    margin: 25px;
+    border-radius: 50%;
+    padding: 7.5px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.35);
+    transition: 0.5s ease;
+    background-color: white;
+}
+
+.fa-whatsapp:hover {
+    background-color: #25d366;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #25d366;
+}
+
+.fa-youtube:hover {
+    background-color: #e10600;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #e10600;
+}
+
+.fa-facebook:hover {
+    background-color: #3b5998;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #3b5998;
+}
+
+.fa-x-twitter:hover {
+    background-color: #00acee;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #00acee;
+}
+
+.fa-instagram:hover {
+    background-color: #cd486b;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #cd486b;
+}
+
+#Copyright {
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 0.7rem;
+}
+
+/* WhatsApp Floating Icon */
+.btn-wsp {    
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1ebe57;
+    color:#fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1080;
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #1ebe57;
+    background: #fff;
+}
