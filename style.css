@@ -85,42 +85,55 @@ section[id] {
 
 .video-background {
     position: relative;
-    height: 80vh;
-    /* Reducir al 80% de la altura original */
+    height: 100vh; /* Altura completa de la ventana */
     overflow: hidden;
-    margin-top: 130px;
-    /* Ajusta este valor según tus necesidades */
+    margin-top: 0; /* Eliminamos el margen superior */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.video-background video {
+.video-background video { /*Posición y tamaño del video */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 16%;
+    left: 10%;
     width: 80%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
+    height: 80%;
+    object-fit: cover; /* Mantiene la relación de aspecto */
+    object-position: center;
+   
 }
 
 .video-background-content {
     position: relative;
-    z-index: 1;
+    z-index: 2; /* Mayor z-index para estar sobre el video */
     text-align: center;
     color: white;
-    padding-top: 150px;
+    padding: 20px;
 }
 
+/* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
+    .video-background {
+        height: 80vh; /* Reducimos ligeramente la altura en móviles */
+    }
+    
     .video-background-content {
-        padding-top: 80px;
+        padding-top: 60px;
+    }
+    
+    .video-background video {
+        width: 100%;
+        height: 100%;
     }
 }
 
-.video-background {
-    height: 60vh;
-    /*Ajuste de altura para pantallas más pequeñas */
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .video-background {
+        height: 70vh;
+    }
 }
-
 
 /*------------------------ Servicios -----------------------*/
 
