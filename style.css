@@ -49,9 +49,9 @@ section[id] {
 }
 
 .navbar-brand img {
-    width: 30%;
+    width: 20%;
     height: auto;
-    margin-left: 0;
+    margin-left: 850px;
     margin-right: 0;
 }
 
@@ -86,7 +86,7 @@ section[id] {
 
 .video-background video {
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
     width: 70%;
     height: 70%;
