@@ -743,6 +743,7 @@ section[id] {
 
     .navbar-brand img {
         width: 75% !important; /* 50% más grande (30% original * 1.5 = 45%) */
+        max-width: 200px !important;
         margin: 0 auto !important;
         display: block;
     }
@@ -813,6 +814,7 @@ section[id] {
 
      .navbar-brand img {
         width: 75% !important; /* 50% más grande (30% original * 1.5 = 45%) */
+        max-width: 200px !important;
         margin: 0 auto !important;
         display: block;
     }
