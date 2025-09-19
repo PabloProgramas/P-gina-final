@@ -742,7 +742,7 @@ section[id] {
     }
 
     .navbar-brand img {
-        width: 45% !important; /* 50% más grande (30% original * 1.5 = 45%) */
+        width: 75% !important; /* 50% más grande (30% original * 1.5 = 45%) */
         margin: 0 auto !important;
         display: block;
     }
