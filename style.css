@@ -862,6 +862,12 @@ section[id] {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .sticky-container {
+        width: 100vw;
+        overflow-x: hidden;
     }
     
     .logo-container {
@@ -901,13 +907,13 @@ section[id] {
 
     /* AJUSTES DEL VIDEO PARA LANDSCAPE */
     .video-background {
-        margin-top: 45px;
+        margin-top: 0px;
         min-height: 180px;
         background: #1a1a1a;
     }
     
     .video-background video {
-        width: 92%;
+        width: 100%;
         max-height: 180px;
         border-radius: 5px;
     }
@@ -920,6 +926,27 @@ section[id] {
     .navbar-collapse {
         max-height: 200px;
         overflow-y: auto;
+    }
+
+     
+    
+    
+}
+
+/* Añadir también para tablets pequeñas en landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .navbar-brand img {
+        width: 120px !important;
+    }
+    
+    .logo-container {
+        position: static;
+        transform: none;
+    }
+    
+    .navbar-toggler {
+        position: static;
+        transform: none;
     }
 }
 
