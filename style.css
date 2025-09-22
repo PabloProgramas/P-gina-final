@@ -823,7 +823,7 @@ section[id] {
 /* Móviles pequeños */
 @media (max-width: 480px) {
     .video-background {
-        margin-top: 20px;
+        margin-top: -100px;
         min-height: 250px;
     }
     
@@ -850,13 +850,66 @@ section[id] {
 
 /* Modo landscape en móviles */
 @media (max-width: 768px) and (orientation: landscape) {
+   
+    /* CORRECCIÓN PARA EL NAVBAR EN MODO LANDSCAPE */
+    .navbar-custom {
+        padding: 5px 0;
+    }
+
+    .navbar-custom .container-fluid {
+        position: relative;
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo-container {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        z-index: 1001;
+    }
+    
+    .navbar-brand img {
+        width: 90px !important;
+        height: auto;
+        margin: 0 !important;
+        display: block;
+    }
+    
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 4px 8px;
+        z-index: 1002;
+    }
+    
+    .navbar-collapse {
+        margin-top: 45px;
+        max-height: 180px;
+        overflow-y: auto;
+        background: white;
+        border-radius: 0 0 5px 5px;
+    }
+    
+
+    /* AJUSTES DEL VIDEO PARA LANDSCAPE */
     .video-background {
-        margin-top: 60px;
-        min-height: 200px;
+        margin-top: 45px;
+        min-height: 180px;
+        background: #1a1a1a;
     }
     
     .video-background video {
-        max-height: 200px;
+        width: 92%;
+        max-height: 180px;
+        border-radius: 5px;
     }
     
     .navbar-brand img {
