@@ -774,7 +774,7 @@ section[id] {
     }
     
     .video-background {
-        margin-top: 70px;
+        margin-top: 20px;
         min-height: 300px;
     }
     
@@ -823,7 +823,7 @@ section[id] {
 /* Móviles pequeños */
 @media (max-width: 480px) {
     .video-background {
-        margin-top: -120px;
+        margin-top: 20px;
         min-height: 250px;
     }
     
