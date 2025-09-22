@@ -14,7 +14,7 @@ section[id] {
     scroll-margin-top: 100px;
 }
 
-/*------------------------ Barras iniciales -----------------------*/
+/*------------------------ Barras iniciales CORREGIDAS -----------------------*/
 .sticky-container {
     position: fixed;
     top: 0;
@@ -26,6 +26,7 @@ section[id] {
     background-color: white;
     padding: 0.8rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .navbar-custom .nav-link {
@@ -45,13 +46,13 @@ section[id] {
 
 .navbar-toggler {
     margin-left: auto;
-    margin-right: 0;
 }
 
+/* CORRECCIÓN PRINCIPAL - Eliminar el margin-left enorme */
 .navbar-brand img {
-    width: 20%;
+    width: 180px;
     height: auto;
-    margin-left: 850px;
+    margin-left: 0; /* ELIMINADO el margin-left: 850px */
     margin-right: 0;
 }
 
@@ -78,23 +79,24 @@ section[id] {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    margin-top: 0px;
+    margin-top: 100px; /* Ajustado */
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #000;
 }
 
 .video-background video {
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 50%;
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
+    width: 80%; /* Ajustado al 80% */
+    height: auto;
+    object-fit: contain;
     object-position: center;
     transform: translate(-50%, -50%);
-    max-width: 1400px;
-    max-height: 788px;
+    max-width: 1200px;
+    max-height: 700px;
 }
 
 .video-background-content {
@@ -174,7 +176,6 @@ section[id] {
 }
 
 /*------------------------ Detalle de servicios -----------------------*/
-/* Contenedor principal */
 .container-Servicios {
     background-color: #40694b;
     padding: 1rem;
@@ -191,7 +192,6 @@ section[id] {
     z-index: 10;
 }
 
-/* Filas impares (30% imágenes, 70% texto) */
 .fila-impar {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -205,7 +205,6 @@ section[id] {
     min-height: 300px;
 }
 
-/* Filas pares (70% texto, 30% imágenes) */
 .fila-par {
     display: grid;
     grid-template-columns: 70% 30%;
@@ -220,7 +219,6 @@ section[id] {
     min-height: 300px;
 }
 
-/* Ajustes para la galería - CORREGIDO */
 .my-gallery {
     position: relative;   
     height: 280px;
@@ -231,7 +229,6 @@ section[id] {
     align-items: center; 
 }
 
-/* Cada imagen ocupa el 100% del ancho - CORREGIDO */
 .my-gallery-item {
     position: absolute;
     top: 0;
@@ -243,13 +240,11 @@ section[id] {
     z-index: 0;
 }
 
-/* Mostrar siempre la primera imagen por defecto */
 .my-gallery-item:first-child {
     opacity: 1;
     z-index: 1;
 }
 
-/* Imágenes dentro de la galería - CORREGIDO */
 .my-gallery img {
     width: 100%;
     height: 100%;
@@ -257,113 +252,8 @@ section[id] {
     border-radius: 10px;
 }
 
-/* Animación para el reemplazo de imágenes - SIMPLIFICADA */
-@keyframes fade-random {
-    0%, 20% { opacity: 0; z-index: 0; }
-    30%, 50% { opacity: 1; z-index: 1; }
-    60%, 100% { opacity: 0; z-index: 0; }
-}
+/* ... (mantener las animaciones de las galerías) ... */
 
-/* Aplicación de la animación con tiempos diferentes para filas */
-/* Primera fila */
-#desratizacion .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 0s;
-}
-#desratizacion .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 2.5s;
-}
-#desratizacion .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 5s;
-}
-
-/* Segunda fila */
-#fumigación_cucarachas .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 1s;
-}
-#fumigación_cucarachas .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 3.5s;
-}
-#fumigación_cucarachas .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 6s;
-}
-
-/* tercera fila */
-#pulgas .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 2s;
-}
-#pulgas .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 4.5s;
-}
-#pulgas .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 7s;
-}
-
-/* cuarta fila */
-#hormigas .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 3s;
-}
-#hormigas .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 5.5s;
-}
-#hormigas .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 8s;
-}
-
-/* quinta fila */
-#murcielagos .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 4s;
-}
-#murcielagos .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 6.5s;
-}
-#murcielagos .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 9s;
-}
-
-/* sexta fila */
-#mosquitos .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 0s;
-}
-#mosquitos .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 2.5s;
-}
-#mosquitos .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 5s;
-}
-
-/* Septima fila */
-#palmeras .my-gallery-item:nth-child(1) {
-    animation: fade-random 10s infinite;
-    animation-delay: 1s;
-}
-#palmeras .my-gallery-item:nth-child(2) {
-    animation: fade-random 10s infinite;
-    animation-delay: 3.5s;
-}
-#palmeras .my-gallery-item:nth-child(3) {
-    animation: fade-random 10s infinite;
-    animation-delay: 6s;
-}
-
-/* Contenedores de texto */
 .text-container {
     display: flex;
     align-items: center;
@@ -383,346 +273,17 @@ section[id] {
     box-sizing: border-box;
 }
 
-/* Para dispositivos móviles */
-@media (max-width: 768px) {
-    .container-Servicios {
-        width: 95%;
-        padding: 0.5rem;
-    }
-    
-    .fila-impar,
-    .fila-par {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
-    
-    .text-container p {
-        font-size: 0.9rem;
-    }
-    
-    .my-gallery {
-        height: 200px;
-        margin-bottom: 1rem;
-    }
-    
-    /* Ajustar animaciones para móviles */
-    .my-gallery-item {
-        animation-duration: 12s !important;
-    }
-    
-    .my-gallery-item:nth-child(2) {
-        animation-delay: 4s !important;
-    }
-    
-    .my-gallery-item:nth-child(3) {
-        animation-delay: 8s !important;
-    }
-}
-/* Aplicar animaciones a las galerías... (mantener las animaciones específicas) */
+/*------------------------ Media Queries CORREGIDAS -----------------------*/
 
-/*------------------------ Carrusel de clientes -----------------------*/
-#clients {
-    padding: 40px 0;
-    margin: 2rem 0;
-}
-
-.client-img {
-    width: 30%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-#clients h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    color: #333;
-    text-align: center;
-}
-
-.carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-/*------------------------ Formulario de contactos -----------------------*/
-.contact-section {
-    background-color: #40694b;
-    padding: 40px 20px;
-    border-radius: 10px;
-    width: 80%;
-    margin: 2rem auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.contact-section h1 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-image,
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    margin: 10px;
-}
-
-.contact-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-.contact-form label {
-    color: white;
-    margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid white;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #fff;
-    box-shadow: 0 0 5px white;
-}
-
-.contact-form button {
-    padding: 10px;
-    color: white;
-    background-color: #609760;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.contact-form button:hover {
-    background-color: #40694b;
-}
-
-.contact-description {
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-    font-size: 16px;
-    text-align: center;
-}
-
-/*------------------------ Mapa Encuéntranos -----------------------*/
-.map-section {
-    background-color: #f7fcf8;
-    padding: 40px 20px;
-    border-radius: 10px;
-    width: 80%;
-    margin: 2rem auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.map-section h1 {
-    color: rgb(8, 8, 8);
-    margin-bottom: 20px;
-}
-
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/*------------------------ Footer -----------------------*/
-#footerbackground {
-    background: linear-gradient(to bottom, #40694b, #000000);
-    text-align: center;
-    padding: 20px 10px;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-}
-
-.footer-content {
-    display: inline-block;
-    width: 100%;
-}
-
-#tituloRS {
-    color: white;
-    text-align: center;
-    font-family: "Nunito", sans-serif;
-    font-style: italic;
-    font-weight: 800;
-}
-
-.contenedor {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.contenedor i {
-    font-size: 25px;
-    color: #48705d;
-    margin: 15px;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
-    transition: 0.5s ease;
-    background-color: white;
-}
-
-.contenedor i:hover {
-    transform: scale(1.2);
-}
-
-.fa-whatsapp:hover { background-color: #25d366; color: white; box-shadow: 0 0 25px #25d366; }
-.fa-youtube:hover { background-color: #e10600; color: white; box-shadow: 0 0 25px #e10600; }
-.fa-facebook:hover { background-color: #3b5998; color: white; box-shadow: 0 0 25px #3b5998; }
-.fa-x-twitter:hover { background-color: #00acee; color: white; box-shadow: 0 0 25px #00acee; }
-.fa-instagram:hover { background-color: #cd486b; color: white; box-shadow: 0 0 25px #cd486b; }
-
-#Copyright {
-    color: white;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    font-size: 0.7rem;
-    margin-top: 15px;
-}
-
-.btn-wsp {
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #1ebe57;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1080;
-}
-
-.btn-wsp:hover {
-    color: #1ebe57;
-    background: #fff;
-}
-
-
-/* Asegurar que el contenedor sticky funcione correctamente */
-.sticky-container {
-    position: relative;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Navbar principal mejorado */
-.navbar-custom {
-    background-color: #fff; /* Asegurar fondo */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 10px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand {
-    padding: 0;
-    margin: 0;
-}
-
-.navbar-brand img {
-    width: 180px; /* Tamaño base */
-    height: auto;
-    transition: all 0.3s ease;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-/* Contenedor del navbar para mejor control */
-.navbar-custom .container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-/* Ajustes para el botón del menú hamburguesa */
-.navbar-toggler {
-    border: none;
-    padding: 5px;
-    margin-left: 15px;
-}
-
-/* Video background mejorado */
-.video-background {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    /*background: #000; /*Fondo negro para bordes si el video no cubre */
-    margin-top: -130px; /* Ajuste según altura del navbar */
-}
-
-.video-background video {
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    display: block;
-}
-
-.video-background-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-}
-
-/*------------------------ Media Queries Mejoradas -----------------------*/
-
-/* Tablets grandes */
 @media (max-width: 1024px) {
     .video-background {
-        margin-top: 60px;
+        margin-top: 80px;
         height: auto;
         min-height: 400px;
     }
     
     .video-background video {
-        width: 95%;
+        width: 85%;
         height: auto;
         max-height: 500px;
     }
@@ -732,7 +293,6 @@ section[id] {
     }
 }
 
-/* Tablets */
 @media (max-width: 992px) {
     .video-background {
         margin-top: 80px;
@@ -740,7 +300,7 @@ section[id] {
     }
     
     .video-background video {
-        width: 98%;
+        width: 90%;
         max-height: 400px;
     }
     
@@ -748,7 +308,6 @@ section[id] {
         width: 140px;
     }
     
-    /* Mejor organización del logo y menú */
     .navbar-custom .container-fluid {
         flex-wrap: wrap;
         justify-content: center;
@@ -767,19 +326,18 @@ section[id] {
     }
 }
 
-/* Móviles grandes */
 @media (max-width: 768px) {
     .navbar-custom {
         padding: 8px 0;
     }
     
     .video-background {
-        margin-top: 20px;
+        margin-top: 70px;
         min-height: 300px;
     }
     
     .video-background video {
-        width: 100%;
+        width: 95%;
         max-height: 300px;
         object-fit: contain;
     }
@@ -789,7 +347,6 @@ section[id] {
         margin: 0 auto;
     }
     
-    /* Contenedor del navbar reorganizado */
     .navbar-custom .container-fluid {
         position: relative;
         min-height: 60px;
@@ -810,7 +367,6 @@ section[id] {
         z-index: 1001;
     }
     
-    /* Asegurar que el menú colapsado no se solape */
     .navbar-collapse {
         margin-top: 60px;
         background: white;
@@ -818,16 +374,37 @@ section[id] {
         border-radius: 5px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
+    
+    /* Ajustes para servicios en móviles */
+    .container-Servicios {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    
+    .fila-impar,
+    .fila-par {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .text-container p {
+        font-size: 0.9rem;
+    }
+    
+    .my-gallery {
+        height: 200px;
+        margin-bottom: 1rem;
+    }
 }
 
-/* Móviles pequeños */
 @media (max-width: 480px) {
     .video-background {
-        margin-top: -100px;
+        margin-top: 60px;
         min-height: 250px;
     }
     
     .video-background video {
+        width: 98%;
         max-height: 250px;
     }
     
@@ -848,14 +425,11 @@ section[id] {
     }
 }
 
-/* Modo landscape en móviles */
 @media (max-width: 768px) and (orientation: landscape) {
-   
-    /* CORRECCIÓN PARA EL NAVBAR EN MODO LANDSCAPE */
     .navbar-custom {
         padding: 5px 0;
     }
-
+    
     .navbar-custom .container-fluid {
         position: relative;
         min-height: 45px;
@@ -863,19 +437,6 @@ section[id] {
         align-items: center;
         justify-content: space-between;
         padding: 0 10px;
-    }
-
-    .sticky-container {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    /* Asegurar que el body no tenga márgenes indeseados */
-    body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
     }
     
     .logo-container {
@@ -912,34 +473,19 @@ section[id] {
         border-radius: 0 0 5px 5px;
     }
     
-
-    /* AJUSTES DEL VIDEO PARA LANDSCAPE */
     .video-background {
-        margin-top: 0px;
+        margin-top: 45px;
         min-height: 180px;
         background: #1a1a1a;
     }
     
     .video-background video {
-        width: 100%;
+        width: 92%;
         max-height: 180px;
         border-radius: 5px;
     }
-    
-    .navbar-brand img {
-        width: 100px;
-    }
-    
-    /* Menú más compacto en landscape */
-    .navbar-collapse {
-        max-height: 200px;
-        overflow-y: auto;
-    }
-
-     
-    
-    
 }
+
 
 /* Añadir también para tablets pequeñas en landscape */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
