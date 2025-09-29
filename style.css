@@ -225,13 +225,13 @@ section[id] {
 
 /* Ajustes para la galería - CORREGIDO */
 .my-gallery {
-    position: relative;   
+    position: relative;
     height: 280px;
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 /* Cada imagen ocupa el 100% del ancho - CORREGIDO */
@@ -262,9 +262,24 @@ section[id] {
 
 /* Animación para el reemplazo de imágenes - SIMPLIFICADA */
 @keyframes fade-random {
-    0%, 20% { opacity: 0; z-index: 0; }
-    30%, 50% { opacity: 1; z-index: 1; }
-    60%, 100% { opacity: 0; z-index: 0; }
+
+    0%,
+    20% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    30%,
+    50% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    60%,
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
 }
 
 /* Aplicación de la animación con tiempos diferentes para filas */
@@ -273,10 +288,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 0s;
 }
+
 #desratizacion .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 2.5s;
 }
+
 #desratizacion .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 5s;
@@ -287,10 +304,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 1s;
 }
+
 #fumigación_cucarachas .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 3.5s;
 }
+
 #fumigación_cucarachas .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 6s;
@@ -301,10 +320,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 2s;
 }
+
 #pulgas .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 4.5s;
 }
+
 #pulgas .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 7s;
@@ -315,10 +336,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 3s;
 }
+
 #hormigas .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 5.5s;
 }
+
 #hormigas .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 8s;
@@ -329,10 +352,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 4s;
 }
+
 #murcielagos .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 6.5s;
 }
+
 #murcielagos .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 9s;
@@ -343,10 +368,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 0s;
 }
+
 #mosquitos .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 2.5s;
 }
+
 #mosquitos .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 5s;
@@ -357,10 +384,12 @@ section[id] {
     animation: fade-random 10s infinite;
     animation-delay: 1s;
 }
+
 #palmeras .my-gallery-item:nth-child(2) {
     animation: fade-random 10s infinite;
     animation-delay: 3.5s;
 }
+
 #palmeras .my-gallery-item:nth-child(3) {
     animation: fade-random 10s infinite;
     animation-delay: 6s;
@@ -421,6 +450,7 @@ section[id] {
         animation-delay: 8s !important;
     }
 }
+
 /* Aplicar animaciones a las galerías... (mantener las animaciones específicas) */
 
 /*------------------------ Carrusel de clientes -----------------------*/
@@ -603,11 +633,35 @@ section[id] {
     transform: scale(1.2);
 }
 
-.fa-whatsapp:hover { background-color: #25d366; color: white; box-shadow: 0 0 25px #25d366; }
-.fa-youtube:hover { background-color: #e10600; color: white; box-shadow: 0 0 25px #e10600; }
-.fa-facebook:hover { background-color: #3b5998; color: white; box-shadow: 0 0 25px #3b5998; }
-.fa-x-twitter:hover { background-color: #00acee; color: white; box-shadow: 0 0 25px #00acee; }
-.fa-instagram:hover { background-color: #cd486b; color: white; box-shadow: 0 0 25px #cd486b; }
+.fa-whatsapp:hover {
+    background-color: #25d366;
+    color: white;
+    box-shadow: 0 0 25px #25d366;
+}
+
+.fa-youtube:hover {
+    background-color: #e10600;
+    color: white;
+    box-shadow: 0 0 25px #e10600;
+}
+
+.fa-facebook:hover {
+    background-color: #3b5998;
+    color: white;
+    box-shadow: 0 0 25px #3b5998;
+}
+
+.fa-x-twitter:hover {
+    background-color: #00acee;
+    color: white;
+    box-shadow: 0 0 25px #00acee;
+}
+
+.fa-instagram:hover {
+    background-color: #cd486b;
+    color: white;
+    box-shadow: 0 0 25px #cd486b;
+}
 
 #Copyright {
     color: white;
@@ -640,16 +694,156 @@ section[id] {
 }
 
 /*------------------------ Media Queries -----------------------*/
-@media (max-width: 1024px) {
+
+@media (max-width: 1800px) {
+
+    .navbar-brand img {
+        width: 40%;        
+        height: 10%;        
+        margin-left: 45%;
+        margin-right: 0;
+    }
+
+    .top-bar {
+        background: linear-gradient(to bottom, #000000, #40694b);
+        color: #fff;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        width: 100%;
+        z-index: 1040;
+    }
+
+    .top-bar .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .video-background {
+        height: 60vh;
+        margin-top: 150px;
+    }
+
     .video-background video {
-        width: 92%;
-        height: 85%;
-        max-width: 1000px;
-        max-height: 563px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+   
+}
+
+
+@media (max-width: 1200px) {
+
+    .navbar-brand img {
+        width: 40%;        
+        height: auto;        
+        margin-left: 250px;
+        margin-right: 0;
+    }
+
+    .top-bar {
+        background: linear-gradient(to bottom, #000000, #40694b);
+        color: #fff;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        width: 100%;
+        z-index: 1040;
+    }
+
+    .top-bar .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .video-background {
+        height: 60vh;
+        margin-top: 130px;
+    }
+
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .navbar-brand img {
+        width: 40%;        
+        height: auto;        
+        margin-left: 200px;
+        margin-right: 0;
+    }
+
+    .top-bar {
+        background: linear-gradient(to bottom, #000000, #40694b);
+        color: #fff;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        width: 100%;
+        z-index: 1040;
+    }
+
+    .top-bar .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    .video-background {
+        height: 60vh;
+        margin-top: 110px;
+    }
+
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
 @media (max-width: 992px) {
+
+    .navbar-brand img {
+        width: 40%;        
+        height: auto;        
+        margin-left: 150px;
+        margin-right: 0;
+    }
+
+    .top-bar {
+        background: linear-gradient(to bottom, #000000, #40694b);
+        color: #fff;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        width: 100%;
+        z-index: 1040;
+    }
+
+    .top-bar .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
     .service-grid .col-md-6 {
         flex-basis: 60%;
         max-width: 60%;
@@ -660,30 +854,23 @@ section[id] {
         max-width: 40%;
     }
 
-    .navbar-brand img {
-        width: 25% !important;
-    }
-}
-
-@media (max-width: 768px) {
     .video-background {
-        height: 40vh;
-        margin-top:160px;
+        height: 57vh;
+        margin-top: 140px;
     }
 
     .video-background video {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Este es el cambio principal */
-        object-position: center;
-        max-width: none;
-        max-height: none;
+        object-fit: contain;
     }
 
-    .video-background-content {
-        padding-top: 10px;
-    }
+   
+}
 
+@media (max-width: 768px) {
+
+   
     .service-grid .row {
         flex-wrap: wrap;
     }
@@ -745,7 +932,8 @@ section[id] {
     }
 
     .navbar-brand img {
-        width: 50% !important; /* 50% más grande (30% original * 1.5 = 45%) */
+        width: 50% !important;
+        /* 50% más grande (30% original * 1.5 = 45%) */
         max-width: 200px !important;
         margin: 0 auto !important;
         display: block;
@@ -767,12 +955,51 @@ section[id] {
         position: relative;
     }
 
+     .video-background {
+        height: 45vh;
+        margin-top: 185px;
+    }
+
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .video-background {
+        height: 60vh;
+        margin-top: 70px;
+    }
+
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .video-background {
+        height: 40vh;
+        margin-top: 190px;
+    }
+
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
 }
 
 @media (max-width: 480px) {
     .video-background {
-        height: 35vh;
-        margin-top: 100px;
+        height: 26vh;
+        margin-top: 190px;
     }
 
     .video-background video {
@@ -815,22 +1042,11 @@ section[id] {
         width: 50%;
     }
 
-     .navbar-brand img {
-        width: 50% !important; /* 50% más grande (30% original * 1.5 = 45%) */
+    .navbar-brand img {
+        width: 50% !important;
+        /* 50% más grande (30% original * 1.5 = 45%) */
         max-width: 200px !important;
         margin: 0 auto !important;
         display: block;
     }
 }
-
-@media (max-width: 768px) and (orientation: landscape) {
-    .video-background {
-        height: 60vh;
-        margin-top: 70px;
-    }
-
-    .video-background video {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
