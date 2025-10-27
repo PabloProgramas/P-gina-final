@@ -116,8 +116,8 @@ section[id] {
 }
 
 .center-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0rem;
     text-align: center;
 }
 
@@ -132,7 +132,7 @@ section[id] {
     justify-content: center;
     align-items: flex-start;
     min-height: auto;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .service-grid .row {
@@ -144,17 +144,26 @@ section[id] {
 }
 
 .service-grid .col-md-6 {
-    flex: 1;
-    max-width: 50%;
+    flex: 1;   
+}
+
+.service-grid .col-md-6:first-child {
+    flex: 0 0 60%; /* service-list ocupa 65% */
+    max-width: 60%;
+}
+
+.service-grid .col-md-6:last-child {
+    flex: 0 0 40%; /* imagen ocupa 35% */
+    max-width: 40%;
 }
 
 .service-grid .service-list {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     list-style: none;
     padding: 0;
     text-align: left;
-    margin: 0 0 0 21%;
+    margin: 0 0 0 10%;
 }
 
 .service-item {
@@ -162,10 +171,10 @@ section[id] {
 }
 
 .service-grid img {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     border-radius: 10px;
-    margin-left: 1%;
+    margin-left: 0%;
 }
 
 .Titulo_Servicios {
