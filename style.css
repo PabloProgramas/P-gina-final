@@ -878,11 +878,7 @@ section[id] {
 }
 
 @media (max-width: 768px) {
-
-   
-    .service-grid .row {
-        flex-wrap: wrap;
-    }
+      
 
     .service-grid .col-md-6 {
         flex-basis: 100%;
@@ -900,9 +896,23 @@ section[id] {
         display: block;
     }
 
+     .service-grid .row {
+        flex-direction: column; /* Cambia a columna en móviles */
+        flex-wrap: wrap;
+    }
+    
+    .service-grid .col-md-6:first-child,
+    .service-grid .col-md-6:last-child {
+        flex: 0 0 100%; /* Ambos ocupan 100% del ancho */
+        max-width: 100%;
+    }
+    
     .service-grid .service-list {
-        margin-left: 10%;
+        margin-left: 0; /* Elimina el margen izquierdo */
+        font-size: 1.1rem;
         text-align: center;
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0 15px; /* Agrega padding lateral para respirar */
     }
 
     .container-Servicios {
@@ -1003,6 +1013,25 @@ section[id] {
         object-fit: contain;
     }
 
+     .service-grid .row {
+        flex-direction: column; /* Cambia a columna en móviles */
+        flex-wrap: wrap;
+    }
+    
+    .service-grid .col-md-6:first-child,
+    .service-grid .col-md-6:last-child {
+        flex: 0 0 100%; /* Ambos ocupan 100% del ancho */
+        max-width: 100%;
+    }
+    
+    .service-grid .service-list {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0 15px; /* Agrega padding lateral para respirar */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1029,13 +1058,34 @@ section[id] {
     padding: 0;
     text-align: left;
     margin: 0 0 0 10%;
-    }*/
+    }
 
     .service-grid .service-list {
-        margin-left: 5%;
+        margin-left: 15%;
         font-size: 1.1rem;
         text-align: center;
+        width: 100%;
+    }*/
+
+    .service-grid .row {
+        flex-direction: column; /* Cambia a columna en móviles */
+        flex-wrap: wrap;
     }
+    
+    .service-grid .col-md-6:first-child,
+    .service-grid .col-md-6:last-child {
+        flex: 0 0 100%; /* Ambos ocupan 100% del ancho */
+        max-width: 100%;
+    }
+    
+    .service-grid .service-list {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0 15px; /* Agrega padding lateral para respirar */
+    }
+    
 
     .text-container p {
         font-size: 0.85rem;
